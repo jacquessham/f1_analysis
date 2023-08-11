@@ -7,7 +7,7 @@ Before start making any analysis about Formula 1, we should learn more about how
 Reference: <a href="https://docs.fastf1.dev/examples/index.html">Documentation Link</a> for <i>Getting Started</i>
 
 ## Part 1 - Analytical Dashboard
-Coming soon...
+The goal of the Analytical Dashboard is to provide a convenient way for users to make racing analysis with different perspective in one dashboard. You may find more details and dashboard screenshots in the [Part 1](/Part1) folder.
 
 ## Glossary
 <ul>

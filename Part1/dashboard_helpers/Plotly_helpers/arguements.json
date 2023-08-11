@@ -1,0 +1,11 @@
+{
+	"df_directory":"",
+	"viz_type":"line",
+	"viz_name":"",
+	"metadata":{
+		"x":"Distance",
+		"y":"Speed",
+		"viz_subtype":"multi_lines",
+		"cate_col":"Driver"
+	}
+}
