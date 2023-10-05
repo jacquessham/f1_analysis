@@ -9,6 +9,29 @@ Therefore, it is very easy to utilize with Pandas syntax.
 <br><br>
 <b>Note: This API is only available in Python 3.0+</b>
 
+## Object Types
+
+### Session
+Coming soon...
+
+### Event
+This object represent a single event on a race weekend or testing event unit. Here are the methods available to the object:
+
+<ul>
+	<li>is_testing() - Whether the event is a testing event</li>
+	<li>get_session_name() - Return event name</li>
+	<li>get_session_date()</li>
+	<li>get_session() - Return a Session object</li>
+	<li>get_race() - Return a Session object with the race statistics</li>
+	<li>get_qualifying() - Return a Session object with qualifying statistics</li>
+	<li>get_sprint() - Return a Session object with sprint statistics</li>
+	<li>get_sprint_shootout() - Return a Session object with sprint shootout statistics</li>
+	<li>get_practice() - Return a Session object with sprint practice statistics, pass the practice session number as parameter</li>
+</ul>
+
+<br>
+The details can be found in this <a href="https://docs.fastf1.dev/events.html#fastf1.events.Event">documenation link</a>.
+
 ## One Event/Session
 You may use <b>get_session()</b> with the following arguements: <b>Year</b>, <b>Round Number</b>, <b>Session</b> (FP1, FP2, FP3, Q, S, SS, R), and it will return an object to access the information of such event or session. Once you have the object, you may access to the following attributes but not limited to:
 <ul>
@@ -17,6 +40,10 @@ You may use <b>get_session()</b> with the following arguements: <b>Year</b>, <b>
 	<li>event (Pandas Series)</li>
 	<li>And more...</li>
 </ul>
+
+<br>
+It will return a <b>Session</b> object type.
+<br><br>
 
 <a href="https://docs.fastf1.dev/fastf1.html#fastf1.get_session">Documentation</a> for <i>get_session()</i>
 
@@ -30,7 +57,7 @@ print(f"It happened: {session.event['EventDate']}")
 ```
 
 ## Event Schedule
-You may use <b>get_event_schedule()</b> to obtain a dataframe of the information of a series of Grands Prix. 
+You may use <b>get_event_schedule()</b> to obtain a dataframe of the information of a series of Grands Prix. If you want to get the statistics during the testing session, you may use <b>get_testing_session()</b>..
 <br><br>
 Available columns:
 <ul>
@@ -54,7 +81,7 @@ Available columns:
 	<li>F1ApiSupport<li>
 </ul>
 <br>
-The method return a FastF1 object based on Pandas, you may access the object with Pandas syntax.
+The method return a FastF1 object based on Pandas, you may access the object with Pandas syntax. It will return a <b>Session</b> object type.
 
 <br><br>
 Example:
@@ -97,6 +124,7 @@ You may execute <i>part0_examples.py</i> stated with an arguement of which examp
 <ul>
 	<li>get_session</li>
 	<li>get_event_schedule</li>
+	<li>get_testing_session</li>
 	<li></li>
 </ul>
 
